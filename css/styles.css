@@ -1,13 +1,35 @@
+
+/* Algemene styling */
+
 *{
     font-family: "Istok Web", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
     --belastingblauw: #154273;
     --belastingblauwdonker: #0A213A;
     --buttontext: white;
     --text: black;
+}
+
+main{
+    background-color: aliceblue;
+}
+
+main > div{
+    margin: 0 1rem;
+    display: flex;
+}
+
+main > div button{
+    height: 2em;
+    width: 2em;
+    text-align: center;
+    background-color: #93B5DE;
+    color: var(--buttontext);
+    font-weight: 600;
+    border-radius: 50%
 }
 
 button{
@@ -15,30 +37,73 @@ button{
     border-radius: 0;
     color: var(--buttontext);
     border: none;
-    border-bottom: 2px solid var(--belastingblauwdonker);
-    padding: .5rem 1rem calc(.5rem - 2px) 1rem;
+    padding: .2rem .5rem;
     font-size: 1rem; 
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     gap: .5rem;
+    font-weight: 500;
 }
 
-body{
-    background-color: aliceblue;
+button:active{
+    background-color: var(--belastingblauwdonker);
 }
+
+button:focus{
+    background-color: orange;
+}
+label:nth-of-type(1){
+    margin-top: 0;
+}
+
+label{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+input{
+    border-radius: 0;
+    border: 1px solid #93B5DE;
+}
+
+input:active{
+    border: 1px solid orange;
+    border-radius: 0;
+}
+
+input:focus{
+    border: 1px solid orange;
+    border-radius: 0;
+}
+
+/* Einde algemene styling */
+
+/* Header styling */
 
 header{
+    height: 20vh;
     margin: 0 1rem;
+    position: relative;
 }
 
 header img{
-    height: 11vh;
+    height: 9vh;
+    position: absolute;
+    left: calc(50% - 1.7rem)
+}
+
+header article{
+    padding: 0 1rem;
+    margin-top: 13vh;
+    border-left: 1.5px solid var(--text)
 }
 
 header h1{
-    font-size: 1.5rem;
-    margin-top: .5rem
+    font-size: 1.3rem;
+    line-height: 24px;
 }
 
 header h2{
@@ -46,11 +111,109 @@ header h2{
     font-weight: 400;
 }
 
-header hr{
-    border: .5px solid black;
-    margin-top: .3rem
+/* Einde Header styling */
+
+/* Intro styling */
+
+main > section{
+    margin: 1rem 1rem 0 1rem;
+    display: grid;
+    grid-template-columns: 40px 80px auto 120px;
+    column-gap: 2px;
+    row-gap: 1rem;
 }
 
-main section:nth-of-type(1){
-    margin: 1.2rem 1rem 0 1rem;
+h3{
+    padding: .2rem 0 .2rem .5rem;
+    color: var(--buttontext);
+    background-color: var(--belastingblauw);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+main section:nth-of-type(1) h3:nth-of-type(1){
+    grid-column: 1/2;
+}
+
+main section:nth-of-type(1) h3:nth-of-type(2){
+    grid-column: 2/5;
+}
+
+main section:nth-of-type(1) p{
+    grid-column: 2/5;
+    width: 80vw;
+    font-size: .9rem;
+}
+
+main section:nth-of-type(1) p a{
+    color: var(--belastingblauw);
+    text-decoration: none;
+}
+
+main section:nth-of-type(1) p a:active{
+    color: var(--belastingblauwdonker);
+    background-color: transparent;
+}
+
+main section:nth-of-type(1) p a:visited{
+    color: #3272B8;
+}
+
+main section:nth-of-type(1) button{
+    grid-column: 4/5;
+}
+
+/* Einde intro styling */
+
+/* Eerste fieldset styling */
+
+main form fieldset{
+    border: none;
+}
+
+main form .onderdeel{
+    margin: 1rem 1rem 0 1rem;
+    display: grid;
+    grid-template-columns: 40px 80px auto 120px;
+    column-gap: 2px;
+    row-gap: 1rem;
+}
+
+main form fieldset .onderdeel h3:nth-of-type(1){
+    grid-column: 1/2;
+}
+
+main form fieldset .onderdeel h3:nth-of-type(2){
+    grid-column: 2/5;
+}
+
+main form fieldset .onderdeel button:nth-of-type(1){
+    grid-column: 1/3;
+}
+
+main form fieldset .onderdeel button:nth-of-type(2){
+    grid-column: 4/5;
+}
+
+main form fieldset .onderdeel section{
+    grid-column: 2/5;
+    display: flex;
+    flex-direction: column;
+}
+
+main form fieldset .onderdeel section p:nth-of-type(1){
+    margin-top: 0;  
+}
+
+main form fieldset .onderdeel section p{
+    margin-top: .5rem;
+}
+
+main form fieldset .onderdeel section div{
+    display: flex;
+    align-items: center;
+}
+
+main form fieldset .onderdeel section div label{
+    margin: 0;
 }

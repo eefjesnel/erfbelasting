@@ -13,16 +13,25 @@
 <body>
     <header>
         <img src="images/belastingdienstLogo.png" alt="logo van de belangstingdienst Nederland">
-        <h1><strong>Aangifte 2023</strong></h1>
-        <h2>Erfbelasting</h2>
-        <hr>
+        <article>
+            <h1><strong>Aangifte 2023</strong></h1>
+            <h2>Erfbelasting</h2>
+        </article>
     </header>
     <main>
+        <div>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+        </div>
         <section>
+            <h3></h3>
             <h3>Hoe vult u dit formulier in?</h3>
             <p>Dit kan een lastige tijd zijn voor u, daarom hebben wij ons best gedaan om dit proces zo gemakkelijk mogelijk te maken.
                 Neem de tijd om dit formulier juist in te vullen. U kunt elk moment een pauze nemen en later terugkomen, uw data wordt opgeslagen.
-                Bij vragen bekijk de erfbelasting toelichting of neem contact op met een medewerker op mijnbelastingdienst.nl.
+                Bij vragen bekijk de erfbelasting toelichting of neem contact op met een medewerker op <a href="https://www.belastingdienst.nl/wps/wcm/connect/nl/home/home">www.belastingdienst.nl</a>.
             </p>
             <button>Start
                 <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,16 +40,73 @@
             </button>
                 
         </section>
+
         <form action="post">
-            <label for="name">
-                name 
-            </label>
-            <input type="radio" id="name" name="contact"></input>
-            <label for="adres">
-                adres
-            </label>
-            <input type="radio" id="adres" name="contact"></input>
+            <fieldset>
+                <section class="onderdeel">
+                    <h3>1a</h3>
+                    <h3>Gegevens van de overledene</h3>
+                    <section>
+                        <label for="voorletter">Voorletter(s)</label>
+                        <input type="text" id="voorletter">
+                        <label for="tussenvoegsel">Tussenvoegsel(s)</label>
+                        <input type="text" id="tussenvoegsel">
+                        <label for="achternaam">Achternaam</label>
+                        <input type="text" id="achternaam">
+                        <label for="bsn">Burgerservicenummer overledene</label>
+                        <input type="number" id="bsn">
+                        <label for="overlijdingsdatum">Overlijdingsdatum</label>
+                        <input type="date" id="overlijdingsdatum">
+                    </section>
+                    <button>
+                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 1L1 6L6 11" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Vorrige
+                    </button>
+                    <button>Volgende
+                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L6 6L1 11" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                    </button>
+                </section>
+                <section class="onderdeel">
+                    <h3>1b</h3>
+                    <h3>Gegevens van de overledene</h3>
+                    <section>
+                        <p>Was de overledene getrouwd of had de overledene een geregistreerd partner op het moment van overlijden?</p>
+                        <div>
+                            <input type="radio" id="bla" name="getrouwd">
+                            <label for="bla">Nee <span>Ga verder met vraag 1c.</span></label>
+                            <input type="radio" id="blub" name="getrouwd">
+                            <label for="blub">Ja</label>
+                        </div>
+
+                        <p>Hadden de overledene en diens echtgenoot of geregistreerd partner huwelijkse of partnerschaps- voorwaarden laten vastleggen in een notariële akte?</p>
+                        <div>
+                            <input type="radio" id="bla" name="getrouwd">
+                            <label for="bla">Nee</label>
+                            <input type="radio" id="blub" name="getrouwd">
+                            <label for="blub">Ja</label>
+                        </div>
+
+                        <p>Hadden de overledene en diens partner een finaal verrekenbeding?</p>
+                        <div>
+                            <input type="radio" id="bla" name="getrouwd">
+                            <label for="bla">Nee</label>
+                            <input type="radio" id="blub" name="getrouwd">
+                            <label for="blub">Ja</label>
+                        </div>
+
+                        <label for="hi">Datum huwelijkse of partnerschapsvoorwaarden</label>
+                        <input type="date">
+                    </section>
+                </section>
+            </fieldset>
+
+
         </form>
+        
     </main>
     <footer>
 
