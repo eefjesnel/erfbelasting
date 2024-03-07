@@ -1,0 +1,56 @@
+*{
+    font-family: "Istok Web", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    --belastingblauw: #154273;
+    --belastingblauwdonker: #0A213A;
+    --buttontext: white;
+    --text: black;
+}
+
+button{
+    background-color: var(--belastingblauw);
+    border-radius: 0;
+    color: var(--buttontext);
+    border: none;
+    border-bottom: 2px solid var(--belastingblauwdonker);
+    padding: .5rem 1rem calc(.5rem - 2px) 1rem;
+    font-size: 1rem; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: .5rem;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+header{
+    margin: 0 1rem;
+}
+
+header img{
+    height: 11vh;
+}
+
+header h1{
+    font-size: 1.5rem;
+    margin-top: .5rem
+}
+
+header h2{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+header hr{
+    border: .5px solid black;
+    margin-top: .3rem
+}
+
+main section:nth-of-type(1){
+    margin: 1.2rem 1rem 0 1rem;
+}
