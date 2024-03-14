@@ -43,21 +43,24 @@
 
         <form action="post">
             <fieldset>
-                <section class="onderdeel">
+                <legend>Onderdeel 1</legend>
+                <fieldset class="onderdeel">
+                    <legend>Gegevens van de overledene</legend>
                     <h3>1a</h3>
                     <h3>Gegevens van de overledene</h3>
-                    <section>
+                    <div>
                         <label for="voorletter">Voorletter(s)</label>
-                        <input type="text" id="voorletter">
+                        <input type="text" id="voorletter" required>
                         <label for="tussenvoegsel">Tussenvoegsel(s)</label>
-                        <input type="text" id="tussenvoegsel">
+                        <input type="text" id="tussenvoegsel" required>
                         <label for="achternaam">Achternaam</label>
-                        <input type="text" id="achternaam">
+                        <input type="text" id="achternaam" required>
                         <label for="bsn">Burgerservicenummer overledene</label>
-                        <input type="number" id="bsn">
+                        <input type="number" id="bsn" required>
                         <label for="overlijdingsdatum">Overlijdingsdatum</label>
-                        <input type="date" id="overlijdingsdatum">
-                    </section>
+                        <input type="date" id="overlijdingsdatum" required>
+                    </div>
+
                     <button>
                         <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 1L1 6L6 11" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -69,39 +72,63 @@
                             <path d="M1 1L6 6L1 11" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                     </button>
-                </section>
-                <section class="onderdeel">
+                </fieldset>
+                <fieldset class="onderdeel">
+                    <legend>Gegevens van de overledene</legend>
                     <h3>1b</h3>
                     <h3>Gegevens van de overledene</h3>
-                    <section>
-                        <p>Was de overledene getrouwd of had de overledene een geregistreerd partner op het moment van overlijden?</p>
-                        <div>
-                            <input type="radio" id="bla" name="getrouwd">
-                            <label for="bla">Nee <span>Ga verder met vraag 1c.</span></label>
-                            <input type="radio" id="blub" name="getrouwd">
-                            <label for="blub">Ja</label>
-                        </div>
 
-                        <p>Hadden de overledene en diens echtgenoot of geregistreerd partner huwelijkse of partnerschaps- voorwaarden laten vastleggen in een notariële akte?</p>
+                    <fieldset class="radio">
+                        <legend>Was de overledene getrouwd of had de overledene een geregistreerd partner op het moment van overlijden?</legend>
                         <div>
-                            <input type="radio" id="bla" name="getrouwd">
-                            <label for="bla">Nee</label>
-                            <input type="radio" id="blub" name="getrouwd">
-                            <label for="blub">Ja</label>
+                            <div>
+                                <input type="radio" id="getrouwdnee" name="getrouwd">
+                                <label for="getrouwdnee">Nee <span>Ga verder met vraag 1c.</span></label>
+                            </div>
+                            <div>
+                                <input type="radio" id="getrouwdja" name="getrouwd">
+                                <label for="getrouwdja">Ja</label>
+                            </div>
                         </div>
+                    </fieldset>
 
-                        <p>Hadden de overledene en diens partner een finaal verrekenbeding?</p>
+                    <fieldset class="radio">
+                        <legend>Hadden de overledene en diens echtgenoot of geregistreerd partner huwelijkse of partnerschaps- voorwaarden laten vastleggen in een notariële akte?</legend>
                         <div>
-                            <input type="radio" id="bla" name="getrouwd">
-                            <label for="bla">Nee</label>
-                            <input type="radio" id="blub" name="getrouwd">
-                            <label for="blub">Ja</label>
+                            <div>
+                                <input type="radio" id="aktenee" name="akte">
+                                <label for="aktenee">Nee</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="akteja" name="akte">
+                                <label for="akteja">Ja</label>
+                            </div>
                         </div>
+                    </fieldset>
 
+                    <fieldset class="radio">
+                        <legend>Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
+                        <div>
+                            <div>
+                                <input type="radio" id="finaalnee" name="finaal">
+                                <label for="finaalnee">Nee</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="finaalja" name="finaal">
+                                <label for="finaalja">Ja</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="radio">
+                        <legend>bla bla</legend>
                         <label for="hi">Datum huwelijkse of partnerschapsvoorwaarden</label>
                         <input type="date">
-                    </section>
-                </section>
+                    </fieldset>
+
+
+
+                </fieldset>
             </fieldset>
 
 
